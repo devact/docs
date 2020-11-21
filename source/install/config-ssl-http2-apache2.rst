@@ -46,6 +46,9 @@ When opened, edit it to look something like the following:
 	</VirtualHost>
 	</IfModule>
 
+.. note::
+For some Apache configurations the correct RequestHeader syntax could be ``RequestHeader set "X-Forwarded-Proto" expr="%{REQUEST_SCHEME}e"`` and ``RequestHeader set "X-Forwarded-SSL" expr="%{HTTPS}e"`` 
+
 1. Restart Apache2
 
     - On Ubuntu 14.04 and RHEL 6: ``sudo service apache2 restart``
